@@ -1,0 +1,123 @@
+* {
+    /*Tira o padrão do navegador e a barra de rolagem*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*media para controlar o tamanho da fonte*/
+/* removido os font-size e width com erro*/
+@media screen and (min-width: 25em) {
+    html {
+        font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+    }
+}
+
+/*oculta o texto se o tamanho da janela for pequena*/
+/* $$$ melhorar!*/
+@media screen and (max-width: 38em) {
+    .meio {
+        visibility: hidden;
+               
+    }
+}
+
+/*imagem de fundo*/
+.topo {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./pic/00e.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+
+/* ====== controle das listas ========*/
+nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+/* agora os links estão na lateral*/
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    /* ponteiro do mouse */
+    cursor: pointer;
+}
+
+/* altura dos links na lateral */
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 3px solid black;
+    position: absolute;
+    top: 35%;
+}
+
+/*mouse */
+li a:hover {
+    background-color: rgb(54, 156, 240);
+    color: white;
+    transition: 0.4s;
+
+}
+
+/* ====== fim das listas ===== */
+
+/* texto principal*/
+.meio {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    color: black;
+}
+
+h3 span:hover{
+    color:rgb(54, 156, 240);
+}
+
+
+/*============= CSS das outras paginas*/
+
+/* imagem de fundo na lateral*/
+/* $$$ criar uma transição/animação das 2 imagens, javascript*/
+.topoTipo2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./pic/00g.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: fit-content;
+    background-position: left;
+    background-color: rgb(248,248, 248);
+}
+
+/*menu andou um pouco*/
+.linksTipo2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 3px solid black;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+/* posição das 4 paginas */
+.conteudo{
+    position: absolute;
+    left: 30%;
+}
+
+/*tamanho do form no contato*/
+#tab{
+    font-size: 25px;
+}
